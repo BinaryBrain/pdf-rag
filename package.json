@@ -1,0 +1,40 @@
+{
+  "name": "pdf-rag",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "cd dist && node server.js",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "watch:build": "tsc --watch",
+    "watch:start": "nodemon --exec npm run start",
+    "index": "tsc && cd dist && node indexer.js",
+    "dev": "concurrently -n build,start \"npm run watch:build\" \"npm run watch:start\"",
+    "dev:full": "concurrently -n client,server -c yellow,green \"npm run dev\" \"cd client && npm run dev\"",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BinaryBrain/pdf-rag.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BinaryBrain/pdf-rag/issues"
+  },
+  "homepage": "https://github.com/BinaryBrain/pdf-rag#readme",
+  "dependencies": {
+    "@fastify/cors": "^8.4.2",
+    "@zilliz/milvus2-sdk-node": "^2.3.5",
+    "fastify": "^4.24.2",
+    "llamaindex": "^0.0.0-20231013011611",
+    "openai": "^4.20.1"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.0.2",
+    "typescript": "^5.2.2"
+  }
+}
