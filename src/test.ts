@@ -23,22 +23,3 @@ async function main() {
 
 
 main();
-
-// import OpenAI from "openai";
-
-
-// async function main () {
-// const openai = new OpenAI();
-
-// const stream = await openai.chat.completions.create({
-//     model: "gpt-3.5-turbo",
-//     messages: [{ role: "user", content: "Write me a story" }],
-//     stream: true,
-// });
-// console.log(123123123)
-// for await (const chunk of stream) {
-//   console.log(chunk)
-// }
-// console.log(123123123)
-// }
-// main();

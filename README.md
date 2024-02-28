@@ -7,9 +7,11 @@ npm i
 cd client; npm i; cd ..
 ```
 
-Install [pdftotext](https://pypi.org/project/pdftotext/)
+Install [pdftotext](https://pypi.org/project/pdftotext/).
 
-# Index your files
+Make sure you have your OpenAI key in your environment as `OPENAI_API_KEY`.
+
+## Index your files
 
 1) Place your PDF files in `documents/input`
 2) Run  `node indexer.js`
