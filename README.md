@@ -1,5 +1,7 @@
 # PDF RAG
 
+Index your documents and ask questions about them in a chat-like interface.
+
 ## Install
 
 ```sh
